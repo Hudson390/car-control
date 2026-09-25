@@ -47,10 +47,10 @@ public class Car {
 
     public void turnRight() {
         if (running){
-            if (this.speed > 0 && this.speed < 40){
+            if (this.speed > 0 && this.speed < 41){
                 System.out.println("O Carro esta virando para direita!");
             } else {
-                System.out.println("O Carro esta parado!");
+                System.out.println("O Carro está rápido demais, diminua a velocidade!");
             }
 
         }else {
@@ -60,10 +60,10 @@ public class Car {
 
     public void turnLeft() {
         if (running){
-            if (this.speed > 0 && this.speed < 40){
+            if (this.speed > 0 && this.speed < 41){
                 System.out.println("O Carro esta virando para esquerda!");
             } else {
-                System.out.println("O Carro esta parado!");
+                System.out.println("O Carro está rápido demais, diminua a velocidade!");
             }
 
         }else {
@@ -101,12 +101,16 @@ public class Car {
                 System.out.println("O Carro esta acelerando!");
             } else if (this.speed <= 59 && this.march == 3) {
                 this.speed += 10;
+                System.out.println("O Carro esta acelerando!");
             } else if (this.speed <= 79 && this.march == 4) {
                 this.speed += 10;
+                System.out.println("O Carro esta acelerando!");
             } else if (this.speed <= 99 && this.march == 5) {
                 this.speed += 10;
+                System.out.println("O Carro esta acelerando!");
             } else if (this.speed <= 119 && this.march == 6) {
                 this.speed += 10;
+                System.out.println("O Carro esta acelerando!");
             } else if (this.speed > 120){
                 System.out.println("O Carro esta na velocidade máxima!");
             } else {
@@ -120,24 +124,28 @@ public class Car {
     }
     public void decelerate() {
         if (running){
-            if (this.speed <= 19 && this.march == 1){
+            if (this.speed <= 20 && this.speed > 0 && this.march == 1){
                 this.speed -= 10;
-                System.out.println("O Carro esta acelerando!");
-            } else if (this.speed <= 39 && this.march == 2) {
+                System.out.println("O Carro esta reduzindo!");
+            } else if (this.speed <= 40 && this.speed > 20  && this.march == 2) {
                 this.speed -= 10;
-                System.out.println("O Carro esta acelerando!");
-            } else if (this.speed <= 59 && this.march == 3) {
+                System.out.println("O Carro esta reduzindo!");
+            } else if (this.speed <= 60 && this.speed > 40 && this.march == 3) {
                 this.speed -= 10;
-            } else if (this.speed <= 79 && this.march == 4) {
+                System.out.println("O Carro esta reduzindo!");
+            } else if (this.speed <= 80 && this.speed > 60 && this.march == 4) {
                 this.speed -= 10;
-            } else if (this.speed <= 99 && this.march == 5) {
+                System.out.println("O Carro esta reduzindo!");
+            } else if (this.speed <= 100 && this.speed > 80 && this.march == 5) {
                 this.speed -= 10;
-            } else if (this.speed <= 119 && this.march == 6) {
+                System.out.println("O Carro esta reduzindo!");
+            } else if (this.speed <= 120 && this.speed > 100 && this.march == 6) {
                 this.speed -= 10;
-            } else if (this.speed < 0 ){
+                System.out.println("O Carro esta reduzindo!");
+            } else if (this.speed <= 0 ){
                 System.out.println("O Carro esta parado!");
             } else {
-                System.out.println("Necessario trocar de marcha!");
+                System.out.println("Necessario reduzir de marcha!");
             }
 
 
